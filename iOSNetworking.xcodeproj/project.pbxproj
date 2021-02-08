@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		08372D9225D0298E00215B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08372D9025D0298E00215B54 /* LaunchScreen.storyboard */; };
 		08372D9D25D0298E00215B54 /* iOSNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08372D9C25D0298E00215B54 /* iOSNetworkingTests.swift */; };
 		08372DA825D0298E00215B54 /* iOSNetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08372DA725D0298E00215B54 /* iOSNetworkingUITests.swift */; };
+		08372DBD25D02EE200215B54 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 08372DBC25D02EE200215B54 /* Alamofire */; };
+		08372DC525D04FE000215B54 /* AFHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08372DC425D04FE000215B54 /* AFHttp.swift */; };
+		08EF63FE25D10E6900C430A9 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF63FD25D10E6900C430A9 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		08372DA325D0298E00215B54 /* iOSNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08372DA725D0298E00215B54 /* iOSNetworkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSNetworkingUITests.swift; sourceTree = "<group>"; };
 		08372DA925D0298E00215B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08372DC425D04FE000215B54 /* AFHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFHttp.swift; sourceTree = "<group>"; };
+		08EF63FD25D10E6900C430A9 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08372DBD25D02EE200215B54 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +107,11 @@
 		08372D8125D0298C00215B54 /* iOSNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				08372DC325D04FC300215B54 /* model */,
+				08372DC225D04FBB00215B54 /* network */,
+				08372DC125D04F7800215B54 /* screens */,
 				08372D8225D0298C00215B54 /* AppDelegate.swift */,
 				08372D8425D0298C00215B54 /* SceneDelegate.swift */,
-				08372D8625D0298C00215B54 /* ContentView.swift */,
 				08372D8B25D0298E00215B54 /* Assets.xcassets */,
 				08372D9025D0298E00215B54 /* LaunchScreen.storyboard */,
 				08372D9325D0298E00215B54 /* Info.plist */,
@@ -139,6 +147,30 @@
 			path = iOSNetworkingUITests;
 			sourceTree = "<group>";
 		};
+		08372DC125D04F7800215B54 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				08372D8625D0298C00215B54 /* ContentView.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		08372DC225D04FBB00215B54 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				08372DC425D04FE000215B54 /* AFHttp.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		08372DC325D04FC300215B54 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				08EF63FD25D10E6900C430A9 /* Employee.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +187,9 @@
 			dependencies = (
 			);
 			name = iOSNetworking;
+			packageProductDependencies = (
+				08372DBC25D02EE200215B54 /* Alamofire */,
+			);
 			productName = iOSNetworking;
 			productReference = 08372D7F25D0298C00215B54 /* iOSNetworking.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 08372D7625D0298C00215B54;
+			packageReferences = (
+				08372DBB25D02EE200215B54 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 08372D8025D0298C00215B54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08372DC525D04FE000215B54 /* AFHttp.swift in Sources */,
 				08372D8325D0298C00215B54 /* AppDelegate.swift in Sources */,
 				08372D8A25D0298C00215B54 /* iOSNetworking.xcdatamodeld in Sources */,
+				08EF63FE25D10E6900C430A9 /* Employee.swift in Sources */,
 				08372D8525D0298C00215B54 /* SceneDelegate.swift in Sources */,
 				08372D8725D0298C00215B54 /* ContentView.swift in Sources */,
 			);
@@ -601,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08372DBB25D02EE200215B54 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08372DBC25D02EE200215B54 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08372DBB25D02EE200215B54 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		08372D8825D0298C00215B54 /* iOSNetworking.xcdatamodeld */ = {
